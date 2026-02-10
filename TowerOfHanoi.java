@@ -27,6 +27,27 @@ public class TowerOfHanoi {
      */
     public void printMoves(int startingRod, int targetRod, int diskCount) {
         // Implement your code here. You can use additional functions if needed.
+
+        //9-2-26 v.s (aneta) 
+        
+       //base case 
+        if (diskCount < = 2){
+            System.out.println("move " + diskCount + " disk(s) from rod " + startingRod + " to rod " + targetRod); 
+            return;
+        }
+        //recursive step
+        int helper_rod = 6 - startingRod - targetRod;
+
+        System.out.println(“ Move disk 2 from rod " + startingRod + " to rod " + targetRod);
+
+        printMoves(startingRod, helper_rod, diskCount - 2 );
+        }
+        
+
+
+
+
+        
         //int startingRod = 3; 
         //int diskCount = 6; 
         int count = 0;
@@ -95,3 +116,4 @@ public class TowerOfHanoi {
         System.out.printf("Moving %d disks from rod %d to rod %d%n",n, from, to);
     }
 }
+
